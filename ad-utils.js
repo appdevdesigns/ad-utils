@@ -22,7 +22,7 @@ var defaultSetupActions = {
 
             { path:'config/routes.js', append:true,  text:'require(\'[moduleName]\').routes(routes);\n' },
             { path:'config/policies.js', append:true, text:'require(\'[moduleName]\').policies(policies);\n'},
-            
+
         ],
 
 };
@@ -50,7 +50,7 @@ var AD = {
             defaultSetupActions[k] = options[k];
         }
         options = defaultSetupActions;
-       
+
 
 //console.log(options);
 
@@ -76,7 +76,7 @@ var AD = {
                 });
 
                 next();
-                
+
             },
 
 
@@ -122,13 +122,13 @@ var AD = {
 
 // AD.log('.dir:'+dir);
                     filesInThisModule({
-                        list:listFiles, 
+                        list:listFiles,
                         dir:path.join(sailsDir,dir),
                         moduleDir:moduleDir
                     });
-                    
+
                 });
-                
+
 //AD.log(' files to remove:');
 //AD.log(listFiles);
 
@@ -160,7 +160,7 @@ var AD = {
             // 5th: patch the standard sails files with our additions:
             function(next) {
 
-    
+
                 AD.log();
                 AD.log('Patching Sails files:');
 
@@ -191,7 +191,7 @@ var AD = {
 
         string:{
 
-            
+
 
 
 /**
@@ -227,6 +227,14 @@ replaceAll : function (origString, replaceThis, withThis) {
 
 };
 module.exports = AD;
+
+
+
+// now attach AD.spawn
+AD.spawn = require('./lib/spawn.js');
+AD.spawn.AD(AD); // make sure the library can access the global AD obj.
+
+
 
 
 var pathSailsRoot = null;
@@ -356,7 +364,7 @@ var recursiveMakeDir = function( pathBase, pathToMake) {
             AD.log('<green><bold>created:</bold>'+pathBase+'</green>');
 
         } else {
-            
+
             AD.log('<white><bold>exists:</bold>'+pathBase+'</white>');
 
         }
@@ -402,7 +410,7 @@ var filesInThisModule = function(options) {
     // for each file in the given directory
     var listFiles = fs.readdirSync(options.dir);
     listFiles.forEach(function(fileName) {
-        
+
         var pathFile = path.join(options.dir, fileName);
 
 //AD.log('..pathfile:'+pathFile);
@@ -430,7 +438,7 @@ var filesInThisModule = function(options) {
 
             }
         }
-        
+
 
     });
 };
@@ -444,7 +452,7 @@ var syncDirLinks = function(options) {
     files.forEach(function(file) {
 
 
-        if ('.gitkeep '.indexOf(file) == -1) { 
+        if ('.gitkeep '.indexOf(file) == -1) {
         var modulePath = path.join(options.moduleDir, file);
         var sailsPath = path.join(options.sailsDir, file);
 
@@ -455,10 +463,10 @@ var syncDirLinks = function(options) {
 
         } else {
 
-            // I expect these files to exist and not be linked so don't warn 
+            // I expect these files to exist and not be linked so don't warn
             // if one of these: config.js, routes.js, policies.js
             if ('config.js, routes.js, policies.js'.indexOf(file) == -1 ) {
-                
+
                 // but any other file alert someone!
                 AD.log('<yellow><bold>EXISTS:</bold>'+sailsPath+'</yellow>');
                 AD.log('       <yellow> could not create link! </yellow>');
@@ -495,7 +503,7 @@ var patchIt = function(options) {
             // simply append to the file
             fs.appendFileSync(filePath, textData);
             AD.log('<green><bold>PATCHED:</bold>'+filePath+'</green>');
-        
+
         }
 
     }
