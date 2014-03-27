@@ -1,5 +1,5 @@
 {
-  "name": "appdev-utilities",
+  "name": "ad-utils",
   "version": "0.0.1",
   "description": "A collection of server side utilities useful for our npm packages.",
   "main": "ad-utils.js",

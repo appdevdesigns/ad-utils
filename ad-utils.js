@@ -59,6 +59,7 @@ var AD = {
         var sailsDir = rootDir();
 //console.log('moduleName:'+moduleName);
 
+
         AD.log();
         AD.log('setting up module: <green><bold>'+moduleName+'</bold></green>');
 
