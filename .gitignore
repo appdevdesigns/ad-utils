@@ -19,3 +19,4 @@ node_modules
 # ignore eclipse related file
 .project
 .settings
+.idea
