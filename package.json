@@ -19,6 +19,7 @@
     "colog": "~1.0.3",
     "async": "~0.2.10",
     "jquery-deferred": "^0.3.0",
-    "node-uuid": "^1.4.1"
+    "node-uuid": "^1.4.1",
+    "request": "^2.34.0"
   }
 }

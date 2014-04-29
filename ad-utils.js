@@ -18,6 +18,10 @@ AD.module = require('./lib/module.js');
 AD.module.AD(AD);  // make sure the library can access the global AD obj.
 
 
+// define our software abstraction layer
+AD.sal = require('./lib/sal.js');
+
+
 // now attach AD.spawn
 AD.spawn = require('./lib/spawn.js');
 AD.spawn.AD(AD);  // make sure the library can access the global AD obj.
