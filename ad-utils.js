@@ -27,6 +27,10 @@ AD.spawn = require('./lib/spawn.js');
 AD.spawn.AD(AD);  // make sure the library can access the global AD obj.
 
 
+// unit testing tools:
+AD.test = require('./lib/test.js');
+
+
 // now our utils:
 AD.util.clone   = require('./lib/utils/clone.js');
 AD.util.obj     = require('./lib/utils/obj.js');
