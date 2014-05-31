@@ -20,6 +20,7 @@
     "async": "~0.2.10",
     "jquery-deferred": "^0.3.0",
     "node-uuid": "^1.4.1",
-    "request": "^2.34.0"
+    "request": "^2.34.0",
+    "circular-json": "^0.1.6"
   }
 }
