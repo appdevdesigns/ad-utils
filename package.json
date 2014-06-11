@@ -1,6 +1,6 @@
 {
   "name": "ad-utils",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "A collection of server side utilities useful for our npm packages.",
   "main": "ad-utils.js",
   "scripts": {
@@ -20,6 +20,7 @@
     "async": "~0.2.10",
     "jquery-deferred": "^0.3.0",
     "node-uuid": "^1.4.1",
-    "request": "^2.34.0"
+    "request": "^2.34.0",
+    "circular-json": "^0.1.6"
   }
 }
