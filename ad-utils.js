@@ -36,6 +36,7 @@ AD.spawn._AD(AD);  // make sure the library can access the global AD obj.
 
 // unit testing tools:
 AD.test = require('./lib/test.js');
+AD.test._AD(AD);
 AD.testData = require(path.join(__dirname, 'lib', 'testData', 'testData.js'));
 AD.testData._AD(AD);
 
