@@ -43,6 +43,7 @@ AD.testData._AD(AD);
 
 // now our utils:
 AD.util.clone   = require('./lib/utils/clone.js');
+AD.util.fs		= require('./lib/utils/fs.js');
 AD.util.obj     = require('./lib/utils/obj.js');
 AD.util.string  = require('./lib/utils/string.js');
 AD.util.uuid    = require('./lib/utils/uuid.js');
