@@ -1,6 +1,6 @@
 {
   "name": "ad-utils",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "A collection of server side utilities useful for our npm packages.",
   "main": "ad-utils.js",
   "scripts": {
