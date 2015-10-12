@@ -24,6 +24,7 @@
     "node-uuid": "^1.4.1",
     "read": "^1.0.5",
     "request": "^2.34.0",
-    "supertest": "^1.1.0"
+    "supertest": "^1.1.0",
+    "win-spawn": "^2.0.0"
   }
 }
