@@ -20,7 +20,7 @@
     "circular-json": "^0.1.6",
     "colog": "~1.0.3",
     "jquery-deferred": "^0.3.0",
-    "lodash": "^3.10.1",
+    "lodash": "^4.17.15",
     "moment": "^2.10.6",
     "node-uuid": "^1.4.1",
     "read": "^1.0.5",
